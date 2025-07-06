@@ -9,21 +9,8 @@ const listingSchema=new Schema({
     },
     description:String,
   image: {
-  filename: {
-    type: String,
-    default: ""
-  },
-  url: {
-    type: String,
-    default: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60",
-    set: (value) => {
-      // If value is undefined, null, or empty string, use default
-      if (!value || value.trim() === "") {
-        return "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=60";
-      }
-      return value.trim();
-    }
-  }
+      url:String,
+      filename:String,
 },
 
 
